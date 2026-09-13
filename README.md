@@ -32,19 +32,4 @@ Traditional automotive forecasting often relies purely on past sales volumes, fa
 ## ⚙️ Architecture & Data Pipeline
 
 The Python engine (`run_pipeline.py`) performs the following sequence:
-[ Historical Data Generation (2017-2024) ]
-│
-▼
-[ Macro Features: Repo Rate | Petrol Price | Festive Flag ]
-│
-▼
-[ 3-Fold Time-Series Cross-Validation (Evaluated via MAPE) ]
-│
-▼
-[ Final SARIMAX Fitting & 2025 Monthly Demand Prediction ]
-│
-▼
-[ Multi-Dimensional Expansion (10 States × 6 Vehicle Models) ]
-│
-▼
-[ Export to data/maruti_sales_forecast_powerbi.csv ]
+-[ Historical Data Generation (2017-2024) ]-> -[ Macro Features: Repo Rate | Petrol Price | Festive Flag ]-> -[ 3-Fold Time-Series Cross-Validation (Evaluated via MAPE) ]-> -[ Final SARIMAX Fitting & 2025 Monthly Demand Prediction ]-> -[ Multi-Dimensional Expansion (10 States × 6 Vehicle Models) ]-> -[ Export to data/maruti_sales_forecast_powerbi.csv ]
